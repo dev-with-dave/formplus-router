@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form+ | Contact</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=RocknRoll+One&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="public/assets/css/main.css" />
+  </head>
+  <body>
+    <div class="main-container">
+      <header class="main-header">
+        <div class="logo">
+          <a href="/">
+            <img src="public/assets/images/logo.png" alt="" />
+          </a>
+        </div>
+        <nav>
+          <ul>
+            <li>
+              <a href="/">Accueil</a>
+            </li>
+            <li>
+              <a href="nos-activites.html">Nos Activités</a>
+            </li>
+            <li>
+              <a href="contact.html">Contact</a>
+            </li>
+            <li class="subscribe-btn">
+              <a href="abonnement.html">S'abonner en ligne</a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <main class="main-main">
+        <div class="overlay"></div>
+        <form class="contact__form" action="javascript:void(0)">
+          <div><label for="fullname">Nom complet</label><input type="text" id="fullname" /></div>
+          <div><label for="email">Email</label><input type="text" id="email" /></div>
+          <div><label for="subject">Objet</label><input type="text" id="subject" /></div>
+          <div>
+            <label for="message">Message</label>
+            <textarea id="message"></textarea>
+          </div>
+          <button>Envoyer</button>
+        </form>
+      </main>
+      <footer class="main-footer">
+        <div class="main-footer__content">
+          <div class="main-footer__content__infos">
+            <div>
+              <h4>Salles de sport</h4>
+              <ul>
+                <li><a href="#">Tous nos clubs en France</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4>Infos</h4>
+              <ul>
+                <li><a href="#">Abonnement</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Mentions légales</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4>Résaux sociaux</h4>
+              <ul>
+                <li><a href="#">Twitter</a></li>
+                <li><a href="#">Facebook</a></li>
+                <li><a href="#">Instagram</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="main-footer__apps">
+            <h4>Applications</h4>
+            <ul>
+              <li>
+                <a href="#"
+                  ><img src="public/assets/images/google-play-store.png" alt="" /><em
+                    >Télécharger l'appli sur Android</em
+                  ></a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><img src="public/assets/images/apple-white-logo.png" alt="" /><em
+                    >Télécharger l'appli sur iOS</em
+                  ></a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <small class="copy">Tous droits réservés Form<span>+</span> &copy; 2021</small>
+      </footer>
+    </div>
+  </body>
+</html>

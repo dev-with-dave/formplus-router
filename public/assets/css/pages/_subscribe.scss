@@ -1,0 +1,188 @@
+.subscribe {
+  width: 100%;
+  min-height: 100%;
+
+  img {
+    max-width: 100%;
+  }
+
+  &__welcome {
+    height: 50vh;
+    width: 100%;
+    position: relative;
+
+    div {
+      background: url('/public/assets/images/high-five.jpg');
+      background-size: cover;
+      background-position: center 20%;
+      background-attachment: fixed;
+      width: 100%;
+      height: 100%;
+    }
+
+    h1 {
+      font-family: 'RocknRoll One', Arial, Helvetica, sans-serif;
+      font-size: 4rem;
+      position: absolute;
+      bottom: 3rem;
+      width: 100%;
+      text-align: center;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.services {
+  @include flex($justify: center, $flex-flow: row wrap);
+  background-color: #fff;
+  gap: 8rem;
+  padding: 4rem;
+
+  .service {
+    @include flex(center, flex-start, column nowrap);
+    color: $secondary-color;
+    gap: 1rem;
+
+    &__image-container {
+      width: 6rem;
+    }
+
+    p {
+      max-width: 300px;
+      text-align: center;
+    }
+  }
+}
+
+.cta--message {
+  @include flex(center, center, column nowrap);
+  width: 100%;
+  padding: 4rem;
+  gap: 1rem;
+  background-color: #fff;
+
+  strong {
+    color: $secondary-color;
+    font-size: 2.5rem;
+    font-family: 'RocknRoll One', Arial, Helvetica, sans-serif;
+  }
+
+  .arrow-down {
+    width: 5rem;
+    cursor: pointer;
+    transition: $transition;
+
+    &:hover,
+    &:active {
+      transform: scale(1.1);
+    }
+
+    img {
+      max-width: 100%;
+    }
+  }
+}
+
+.plans__container {
+  background-color: #fff;
+  color: $secondary-color;
+  padding: 4rem;
+}
+
+.plans {
+  @include flex(stretch, center, row nowrap);
+  gap: 4rem;
+  margin: 8rem auto;
+  max-width: 1600px;
+
+  &__title {
+    text-align: center;
+
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    h3 {
+      font-size: 1.1rem;
+    }
+  }
+}
+
+.plan {
+  @include flex($justify: space-between, $flex-flow: column nowrap);
+  width: 100%;
+  padding: 1rem;
+  outline: 4px solid transparent;
+  border-radius: 8px;
+  box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.5);
+  position: relative;
+  overflow: hidden;
+  transition: $transition;
+
+  &:hover,
+  &:active {
+    outline-color: $main-color;
+  }
+
+  &.recommended {
+    transform: scale(1.1);
+  }
+
+  &__image {
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    overflow: hidden;
+    width: 100%;
+  }
+
+  &__title-container {
+    padding: 1rem 0;
+    h2 {
+      font-size: 2rem;
+
+      span {
+        font-size: 1.75rem;
+      }
+    }
+  }
+
+  &__price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: block;
+  }
+
+  &__pricing {
+    @include flex($flex-flow: column nowrap);
+    gap: 0.5rem;
+    font-weight: bold;
+  }
+
+  &__cta {
+    @include flex(center, center, column nowrap);
+    gap: 1rem;
+    margin-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  hr {
+    border: none;
+    background-color: transparentize($main-color, 0.25);
+    height: 1px;
+    width: 85%;
+    margin: 2rem auto;
+  }
+}
+
+.recommended-tag {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #fff;
+  background-color: $main-color;
+  transform: rotate(45deg) translate(4rem, -1rem);
+  padding: 1rem;
+  text-align: center;
+  width: 15rem;
+}

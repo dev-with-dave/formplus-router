@@ -1,0 +1,10 @@
+.contact__form {
+  @include flex($flex-flow: column nowrap);
+  gap: 2rem;
+  width: 90%;
+  max-width: 600px;
+
+  div {
+    @include flex($flex-flow: column nowrap);
+  }
+}

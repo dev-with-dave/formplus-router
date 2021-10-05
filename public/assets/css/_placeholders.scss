@@ -1,0 +1,45 @@
+%container {
+  min-height: 100vh;
+  display: grid;
+}
+
+%cta-btn {
+  position: relative;
+  background-color: $main-color;
+  border-radius: 50px;
+  padding: 0.5rem 2rem;
+  font-size: 1.25rem;
+  box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  overflow: hidden;
+  color: #fff;
+  transition: $transition;
+
+  &::before {
+    pointer-events: none;
+    content: '';
+    background: rgba(white, 0.4);
+    width: 4rem;
+    height: 100%;
+    top: 0%;
+    left: -50%;
+
+    transform: skew(45deg);
+    opacity: 0;
+
+    position: absolute;
+
+    transition: opacity 1s ease;
+  }
+
+  &:hover {
+    box-shadow: 2px 2px 7px 2px rgba(0, 0, 0, 0.5);
+    transform: scale(1.02);
+
+    &::before {
+      left: 150%;
+      opacity: 1;
+      transition: left 750ms ease;
+    }
+  }
+}

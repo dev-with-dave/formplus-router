@@ -1,0 +1,21 @@
+.main-main {
+  @include flex(center, center);
+  position: relative;
+}
+
+.catch-phrase {
+  position: relative;
+  z-index: 10;
+  color: $main-color;
+  font-size: 4rem;
+  text-align: center;
+  font-family: 'RocknRoll One', Arial, Helvetica, sans-serif;
+
+  h1 {
+    font-size: 1.25em;
+  }
+
+  h2 {
+    font-size: 0.9em;
+  }
+}

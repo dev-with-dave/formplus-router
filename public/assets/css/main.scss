@@ -1,0 +1,87 @@
+@import 'reset';
+@import 'variables';
+@import 'global';
+@import 'placeholders';
+
+.main-container {
+  @extend %container;
+  grid-template-rows: $main-header-size auto 20rem;
+  grid-template-areas: 'main-header' 'main-main' 'main-footer';
+
+  &-no-footer {
+    @extend %container;
+    grid-template-rows: $main-header-size auto;
+    grid-template-areas: 'main-header' 'main-main';
+  }
+}
+
+.main-header {
+  @include flex(center, space-between);
+  height: $main-header-size;
+  grid-area: main-header;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0 4rem;
+  background-color: #fff;
+  z-index: 5000;
+
+  ul {
+    @include flex(center);
+    @supports not (gap: 1rem) {
+      li:not(:last-child) {
+        margin: 1rem;
+      }
+    }
+
+    gap: 1rem;
+  }
+
+  li:not(.subscribe-btn) {
+    a {
+      color: $secondary-color;
+      text-transform: uppercase;
+      font-size: 1.25rem;
+      font-weight: bold;
+      position: relative;
+      transition: $transition;
+
+      &::before {
+        content: '';
+        height: 0.25rem;
+        width: 0;
+        position: absolute;
+        left: 0;
+        bottom: -0.2rem;
+        background-color: $main-color;
+        transition: $transition;
+      }
+
+      &:hover {
+        color: lighten($main-color, 5%);
+
+        &::before {
+          width: 100%;
+          background-color: lighten($main-color, 5%);
+        }
+      }
+    }
+  }
+}
+
+.main-main {
+  min-height: unquote('calc(100vh - #{$main-header-size})');
+  grid-area: main-main;
+  background-image: url('../images/home.jpg');
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+@import 'footer';
+
+@import 'pages/home';
+@import 'pages/offers';
+@import 'pages/contact';
+@import 'pages/subscribe';
